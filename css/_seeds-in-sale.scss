@@ -1,0 +1,200 @@
+$text-primary:#1F2533;
+$text-secondary:#70737C;
+$green-brand:#359740;
+$white:#FFFFFF;
+#seeds-in-sale {
+    margin-top: 32px;
+    .container {
+        background: #EAF1EB;
+        border-radius: 24px;
+        overflow: hidden;
+        padding: 50px 70px;
+        flex-wrap: wrap;
+        @media (max-width: 992px) {
+            flex-direction: column !important;
+            align-items: start;
+        }
+        @media (max-width: 540px) {
+            padding: 20px;
+        }
+        .text-div {
+            width: 70%;
+            @media (max-width: 992px) {
+                width: 100%;
+            }
+            h1 {
+                max-width: 650px;
+                font-weight: 600;
+                font-size: 48px;
+                line-height: 54px;
+                letter-spacing: -0.05em;
+                color: $text-primary;
+                animation: left-right 2s ease;
+                @media (max-width: 540px) {
+                    font-size: 25px;
+                    line-height: 40px;
+                }
+            }
+            p {
+                max-width: 560px;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 28px;
+                color: $text-primary;
+                margin: 12px 0 21px;
+                animation: left-right 2.5s ease;
+                @media (max-width: 540px) {
+                    line-height: 20px;
+                    margin: 10px 0;
+                }
+            }
+            .price {
+                justify-content: flex-start !important;
+                margin-bottom: 25px;
+                animation: left-right 3s ease;
+                .current-price {
+                    font-weight: 600;
+                    font-size: 42px;
+                    line-height: 54px;
+                    color: $text-primary;
+                    @media (max-width: 540px) {
+                        font-size: 30px;
+                    }
+                }
+                .last-price {
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 54px;
+                    color: $text-secondary;
+                    margin-left: 21px;
+                    text-decoration: line-through;
+                    @media (max-width: 540px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .card {
+                animation: left-right 3.5s ease;
+                button {
+                    font-weight: 500;
+                    font-size: 16px;
+                    letter-spacing: -0.035em;
+                    color: $white;
+                    border: none;
+                    padding: 11px 33px;
+                    border-radius: 8px;
+                    line-height: 178.19%;
+                    @media (max-width: 540px) {
+                        padding: 10px 27px;
+                    }
+                    &:first-child {
+                        background: $green-brand;
+                        margin-right: 12px;
+                    }
+                    &:last-child {
+                        color: $green-brand;
+                        background: $white;
+                    }
+                }
+            }
+            @keyframes left-right {
+                0% {
+                    transform: translateX(-100%);
+                }
+                50% {
+                    transform: translateX(20px);
+                }
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        }
+        .pruduct-view {
+            position: relative;
+            width: 349px;
+            height: 349px;
+            width: 30%;
+            z-index: 1;
+            @media (max-width: 992px) {
+                align-self: center;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                z-index: 2;
+                animation: blur-anim 1s ease;
+                @keyframes blur-anim {
+                    0% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+                @media (max-width: 992px) {
+                    right: -50px;
+                }
+                @media (max-width: 540px) {
+                    right: -100px;
+                }
+            }
+            .backround-images {
+                position: absolute;
+                right: 0;
+                img {
+                    position: absolute;
+                    z-index: 1;
+                    &:nth-child(1) {
+                        top: 150px;
+                        right: -80px;
+                        animation: right-to-left 2s ease;
+                        @media (max-width: 992px) {
+                            right: -300px;
+                            animation: blur-anim 1s ease;
+                        }
+                    }
+                    &:nth-child(2) {
+                        top: -20px;
+                        right: -30px;
+                        animation: blur-anim 3s ease;
+                    }
+                    &:nth-child(3) {
+                        top: 280px;
+                        right: 200px;
+                        animation: left-to-right 1.5s ease;
+                    }
+                    &:nth-child(4) {
+                        top: 50px;
+                        right: 200px;
+                        animation: left-to-right 2.5s ease;
+                    }
+                    @keyframes right-to-left {
+                        0% {
+                            right: -400px;
+                            top: 200px;
+                        }
+                        50% {
+                            top: 150px;
+                            right: -70px;
+                        }
+                        100% {
+                            top: 150px;
+                            right: -80px;
+                        }
+                    }
+                    @keyframes left-to-right {
+                        0% {
+                            right: 300px;
+                        }
+                        50% {
+                            right: 150px;
+                        }
+                        100% {
+                            right: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
