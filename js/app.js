@@ -1,9 +1,12 @@
 // menu
 const menuBtn = document.getElementById("menu");
+const menuBtnIcon = document.querySelector("#menu i");
 const menu = document.querySelector("header nav .container ul");
 
 menuBtn.addEventListener("click", () => {
     menu.classList.toggle("show");
+    menuBtnIcon.classList.toggle("fa-bars");
+    menuBtnIcon.classList.toggle("fa-xmark");
 })
 
 // Scroll animation
